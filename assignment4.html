@@ -1,0 +1,145 @@
+<!--Thomas Stauffer-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 4</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Assignment 3 website">
+        <meta name="keywords" content="golf, planning, tips&tricks, scores, reviews, golf courses">
+        <meta name="author" content="Thomas Stauffer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/mkh7ygd.css">
+        <!--Internal Style Sheet-->
+        <!--I chose this color scheme because dark blue/purple are 2 of my favorite colors-->
+        <!--dark blue #1B1464 white #ffffff-->
+        <!--The dark blue/purple color borders around important elements and shows the user where to click-->
+
+       <style>
+            body{
+                font-family: jaf-domus, sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                color: darkblue;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 1fr 3fr 1fr;
+                width: 85%;
+                margin: auto;
+            }
+            #nav{
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                min-height: 100px;
+                float: inline-end;
+            }
+            
+            #foot{
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 4;
+                color: darkblue;
+            }
+
+            #main-container{
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                background-image: url(./img/golf-club.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position-x: 50%;
+                filter: opacity(70%);
+                 }
+
+            #main-container a{
+                flex: 1 0 100px;
+                color: white;
+
+            }
+
+            #nav a{
+                flex: 1 0 100px;
+                text-align: center;
+                padding: 3%;
+                font-size: 1.6em;
+                color: darkblue;
+                text-decoration: none;
+            }
+            /* mouse over link */
+            #nav a:hover{
+                color: blue;
+            }
+
+            #foot a{
+                float: right;
+                padding: 0.5%;
+                font-size: 1em;
+                color: white;
+                text-decoration: none;
+            }
+            
+            #top-banner{
+                display: flex;
+                flex: 1 0 100px;
+            }
+            #top-banner a{
+                float: right;
+            }
+
+             /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+               #main-container{
+                   background-image: url(./img/markus-spiske-wn35CKouahQ-unsplash.jpg);
+               }
+            }
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+               #main-container h1{
+                   color: darkblue;
+               }
+            }
+            #foot img{
+                float: right;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <nav id="nav">
+                <a href="#golf courses">GOLF COURSES</a>
+                <a href="#scores">SCORES</a>
+                <a href="#tips and tricks">TIPS AND TRICKS</a>
+                <a href="#write a review">WRITE A REVIEW</a> 
+            </nav>
+            <section id="main-container">
+                <header id="header">
+                    <h1 style="color:white;">FIND A COURSE</h1>
+                    <input type="text" placeholder="Search..">
+                </header>
+            </section>
+            <footer id="foot" style="background-color: darkblue;">
+                    <a href="#">FAQ</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">SIGN UP</a>
+                    <img src="./img/instagram_icon-06.png" alt="instagram icon" width="100px" height="90px">
+                    <img src="./img/twitter_icon-07.png" alt="twitter icon" width="100px" height="90px">
+            </footer>
+            <section id="top-banner">
+                <img src="./img/logo-04.png" alt="logo" width="300px" height="100px">
+                <a href="#">SIGN IN</a>
+                <img src="./img/search-icon-05.png" alt="search icon" width="50px" height="50px">
+            </section>
+        </div>
+    </body>
+</html>
